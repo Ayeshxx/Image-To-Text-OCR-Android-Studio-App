@@ -10,13 +10,23 @@
     android:backgroundTint="@color/white"
     tools:context=".MainActivity">
 
-    <ImageView
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:id="@+id/cameraImage"
-        android:scaleType="fitCenter"
-        android:src="@drawable/baseline_image_24"
-        android:layout_marginTop="12dp"/>
+        android:layout_marginTop="12dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/cameraImage"
+            android:scaleType="fitCenter"
+            android:src="@drawable/baseline_image_24"/>
+
+        <com.example.imagetextocr.TextOverlayView
+            android:id="@+id/textOverlayView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
     
     <Button
         android:layout_width="match_parent"
@@ -28,11 +38,10 @@
         android:backgroundTint="@color/blue"
         android:layout_marginTop="12dp"/>
 
-    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Text Extracted from Image:"
+        android:text="Selected Text:"
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/blue"

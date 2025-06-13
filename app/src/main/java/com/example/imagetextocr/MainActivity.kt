@@ -2,6 +2,8 @@ package com.example.imagetextocr
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+
+
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -50,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         copyTextBtn= findViewById(R.id.copyTextBtn)
 
         requestPermissionLauncher=registerForActivityResult(ActivityResultContracts.RequestPermission()){
-            isGranted ->
+                isGranted ->
             if(isGranted){
                 captureImage()
             } else{
@@ -59,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         takePictureLauncher= registerForActivityResult(ActivityResultContracts.TakePicture()){
-            success ->
+                success ->
             if (success){
                 currentPhotoPath?.let { path ->
                     val bitmap= BitmapFactory.decodeFile(path)
@@ -87,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         val photoFile: File? =try{
             createImageFile()
         } catch (ex: IOException){
-            Toast.makeText(this,"Error occured whhen creating file",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Error occured when creating file",Toast.LENGTH_SHORT).show()
             null
         }
         photoFile?.also{

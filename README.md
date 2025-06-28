@@ -1,4 +1,4 @@
-This is an AI ML project being made by combined efforts of 6 team members. We are focusing on building an Optical Character Recognition model that runs efficiently on CPUs and edge devices without requiring high computational resources. Here the edge device we will be using is an Android mobile phone.
+This is project is made by combined efforts of 6 team members. We are focusing on building an Optical Character Recognition model that runs efficiently on CPUs and edge devices without requiring high computational resources. Here the edge device we will be using is an Android mobile phone.
 
 The main steps include building UI, image capture, text recognition, draw rectangle boxes and numbers around text blocks, allow users to click on the text box and display result.
 1. User Interface
